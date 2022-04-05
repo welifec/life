@@ -1,0 +1,82 @@
+.home-scholl {
+  display: flex;
+  justify-content: space-around;
+  margin: 33rpx 39rpx 42rpx 30rpx;
+
+}
+
+.home-scholl-item {
+  display: flex;
+}
+
+.home-scholl-item-bg1 {
+  margin-left: 36rpx;
+  width: 330rpx;
+  height: 156rpx;
+  background-color: #FAF7EF;
+  box-shadow: 1rpx 4rpx 38rpx 0px rgba(128, 115, 115, 0.24);
+  border-radius: 18rpx;
+  display: flex;
+}
+
+.home-scholl-item-bg2 {
+  margin-right: 30rpx;
+  margin-left: 36rpx;
+  width: 330rpx;
+  height: 156rpx;
+  background-color: #F0F7FE;
+  box-shadow: 1rpx 4rpx 38rpx 0px rgba(128, 115, 115, 0.24);
+  border-radius: 18rpx;
+  display: flex;
+}
+
+
+.home-scholl-item image {
+  width: 120rpx;
+  height: 96rpx;
+}
+
+.home-scholl-font {
+  flex: 1;
+  display: flex;
+  /**子元素上下排列*/
+  flex-direction: column;
+  padding: 45rpx 59rpx 45rpx 36rpx;
+  width: 79px;
+  height: 66px;
+}
+
+.home-scholl-font1 {
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #222222;
+}
+
+.home-scholl-font2 {
+  margin-top: 24rpx;
+  font-size: 16rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #E65C00;
+
+}
+
+.home-scholl-font4 {
+  margin-top: 24rpx;
+  font-size: 16rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #146EF0;
+
+}
+
+.home-scholl-image1 {
+  flex: 1;
+  padding: 30rpx 36rpx 30rpx 00rpx;
+}
+
+.home-scholl-image2 {
+  flex: 1;
+  padding: 28rpx 10rpx 28rpx 00rpx;
+}

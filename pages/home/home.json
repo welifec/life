@@ -1,3 +1,12 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "top-image": "/commponents/topimage/top-image",
+    "child-recommend": "/pages/home/childCpns/child-recommend/child-recommend",
+    "child-schollcard": "/pages/home/childCpns/child-schollcard/child-schollcard",
+    "child-hint": "/pages/home/childCpns/child-hint/child-hint",
+    "child-message": "/pages/home/childCpns/child-message/child-message",
+    "child-messagelist": "/pages/home/childCpns/child-messagelist/child-messagelist"
+
+  },
+  "navigationBarTitleText": "校园生活"
 }

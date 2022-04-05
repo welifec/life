@@ -1,0 +1,61 @@
+.home-hint {
+  width: 690rpx;
+  height: 42rpx;
+  margin-top: 48rpx;
+  flex-direction: row;
+  display: flex;
+  margin-left: 30rpx;
+
+}
+
+.home-hint-item1 {
+  background-color: rgba(20, 110, 240, 1.000000);
+  border-radius: 50%;
+  height: 42rpx;
+  display: flex;
+  flex-direction: column;
+  width: 42rpx;
+}
+
+.home-hint image {
+  width: 24rpx;
+  height: 22rpx;
+  margin: 10rpx 0 0 9rpx;
+}
+
+.home-hint-font {
+  width: 351rpx;
+  height: 29rpx;
+  overflow-wrap: break-word;
+  color: rgba(34, 34, 34, 1);
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+  text-align: left;
+  white-space: nowrap;
+  line-height: 30rpx;
+}
+
+.home-hint-item2 {
+  width: 351rpx;
+  height: 29rpx;
+  overflow-wrap: break-word;
+  font-size: 0rpx;
+  font-family: PingFangSC-Regular;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 30rpx;
+  margin: 6rpx 0 0 18rpx;
+}
+
+.home-hint-time {
+  width: 62rpx;
+  overflow-wrap: break-word;
+  color: rgba(152, 152, 152, 1);
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 24rpx;
+  display: block;
+  margin: 12rpx 0 0 217rpx;
+}

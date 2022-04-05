@@ -1,0 +1,41 @@
+.recommend {
+  height: 120rpx;
+  flex-direction: row;
+  display: flex;
+  margin-top: 150rpx;
+}
+
+.recommend-item {
+  border-radius: 50%;
+  height: 119rpx;
+  display: flex;
+  flex-direction: column;
+  width: 95rpx;
+  align-items: center;
+  margin-right: 25rpx;
+  margin-left: 30rpx;
+
+}
+
+.recommend-item-image {
+  border-radius: 50%;
+  height: 70rpx;
+  display: flex;
+  width: 70rpx;
+
+}
+
+.recommend-item-image image {
+  width: 29rpx;
+  height: 34rpx;
+  margin: 18rpx 0 0 21rpx;
+}
+
+.font {
+  width: 100%;
+  font-size: 20rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #222222;
+
+}

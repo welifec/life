@@ -1,0 +1,3 @@
+<view class="top-image">
+  <image src="/assets/home/home_tap.png" mode="widthFix"></image>
+</view>

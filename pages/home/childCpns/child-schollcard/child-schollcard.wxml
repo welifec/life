@@ -1,0 +1,25 @@
+<view class="home-scholl">
+  <view class="home-scholl-item">
+    <view class="home-scholl-item-bg1">
+      <view class="home-scholl-font">
+        <text class="home-scholl-font1">校园号</text>
+        <text class="home-scholl-font2">本校订阅号</text>
+      </view>
+      <view class="home-scholl-image1">
+        <image src="/assets/home/home_scholl1.png"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="home-scholl-item">
+    <view class="home-scholl-item-bg2">
+      <view class="home-scholl-font">
+        <text class="home-scholl-font1">学生团体</text>
+        <text class="home-scholl-font4">本校社团组织</text>
+      </view>
+      <view class="home-scholl-image2">
+        <image src="/assets/home/home_scholl2.png"></image>
+      </view>
+    </view>
+  </view>
+</view>
