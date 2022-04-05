@@ -1,0 +1,6 @@
+<view class="home-message">
+  <view class="home-message-item">
+    <text lines="1" class="home-message-font">校园资讯</text>
+    <view class="home-message-view"></view>
+  </view>
+</view>

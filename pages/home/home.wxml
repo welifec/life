@@ -1,0 +1,15 @@
+<!-- 顶部图片 -->
+<top-image></top-image>
+<!-- 模块功能 -->
+<child-recommend></child-recommend>
+<!-- 校园号 学生团体 -->
+<child-schollcard></child-schollcard>
+<!-- 通知提示 -->
+<child-hint></child-hint>
+<!-- 校园资讯 -->
+<child-message />
+<!-- 校园资讯列表 -->
+<child-messagelist />
+<child-messagelist />
+<child-messagelist />
+<child-messagelist />

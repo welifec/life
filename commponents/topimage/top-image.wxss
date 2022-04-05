@@ -1,0 +1,11 @@
+.top-image image {
+  width: 100%;
+  background: #698AB8;
+  box-shadow: 5px 9px 24px 1px rgba(128, 115, 115, 0.4);
+  border-radius: 30px;
+}
+
+.top-image {
+  height: 130rpx;
+  padding: 24rpx 30rpx 36rpx 30rpx;
+}

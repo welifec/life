@@ -1,11 +1,11 @@
-// pages/home/home.js
+// pages/home/childCpns/child-recommend/rec-job/rec-job.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+
   },
 
   /**

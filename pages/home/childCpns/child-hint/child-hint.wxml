@@ -1,0 +1,9 @@
+<view class="home-hint">
+  <view class="home-hint-item1">
+    <image src="/assets/home/hint.png"></image>
+  </view>
+  <view class="home-hint-item2">
+    <text lines="1" class="home-hint-font">关于本程序上线运的通知</text>
+  </view>
+  <text lines="1" class="home-hint-time">08-21</text>
+</view>

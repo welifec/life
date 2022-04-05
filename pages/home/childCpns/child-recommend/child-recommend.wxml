@@ -1,0 +1,11 @@
+<view class="recommend">
+  <view class="recommend-item" wx:for="{{imagePath}}" wx:key="index">
+    <view class="recommend-item-imageout" bind:tap="handlejob">
+      <view class="recommend-item-image" style="background-color: {{item.bgcolor}};">
+        <image src="{{item.image}}" mode="widthFix" />
+      </view>
+    </view>
+    <view class="s"> <text class="font">{{item.name}}</text>
+    </view>
+  </view>
+</view>
