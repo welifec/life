@@ -1,66 +1,29 @@
 // pages/news/news.js
+import request from '../../service/network.js'
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    indexChecked: 0,
+    home_list: [],
+    test: false,
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  handleText(e) {
+    //传递对应下标到tab里操作
+    const index = e.detail.index;
+    this.setData({
+      indexChecked: index,
+      
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  onLoad: function() {
+    request({
+      url: 'https://api.jisuapi.com/news/get?channel=头条&start=0&num=10&appkey=0a5c7b435f098f99',
+    }).then(res => {
+      this.setData({
+        home_list: res.data.result.list
+      })
+    })
+    // console.log(list); 
+    //判断是用户是否绑定了
   }
+
 })

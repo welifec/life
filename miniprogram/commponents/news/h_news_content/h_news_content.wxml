@@ -1,0 +1,64 @@
+<!--components/news_content/news_content.wxml-->
+<view class="box1" wx:if="{{0 == index}}">
+  <view class="box2" wx:for="{{my_list}}" wx:key="index" bind:tap="handleJump" data-index="{{index}}">
+    <view class="section1">
+      <view class="main5">
+        <text class="infoBox1">{{item.title}}</text>
+        <view class="mod2">
+          <text class="txt4">{{item.time}}</text>
+        </view>
+      </view>
+      <view class="main6">
+        <image src="{{item.pic}}" class="pic2"></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="box1" wx:if="{{1 == index}}">
+  <view class="box2" wx:for="{{textSchool}}" wx:key="index">
+    <view class="section1">
+      <view class="main5">
+        <text lines="1" class="infoBox1">{{item.text_school}} {{index}}</text>
+        <view class="box4">
+          <text lines="1" class="txt4">{{item.textTime}}</text>
+        </view>
+      </view>
+      <view class="main6">
+        <image src="{{imageSchool}}" class="pic2"></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="box1" wx:if="{{2 == index}}">
+  <view class="box2" wx:for="{{textImpotents}}" wx:key="index">
+    <view class="section1">
+      <view class="main5">
+        <text lines="1" class="infoBox1">{{item.text_impotents}}</text>
+        <view class="box4">
+          <text lines="1" class="txt4">{{item.textTime}}</text>
+        </view>
+      </view>
+      <view class="main6">
+        <image src="{{imageImpotents}}" class="pic2"></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="box1" wx:if="{{3 == index}}">
+  <view class="box2" wx:for="{{textDynamic}}" wx:key="index">
+    <view class="section1">
+      <view class="main5">
+        <text lines="1" class="infoBox1">{{item.text_dynamic}}</text>
+        <view class="box4">
+          <text lines="1" class="txt4">{{item.textTime}}</text>
+        </view>
+      </view>
+      <view class="main6">
+        <image src="{{imageDynamic}}" class="pic2"></image>
+      </view>
+    </view>
+  </view>
+</view>

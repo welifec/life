@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "news_tab": "../../commponents/news/h_news_tab/h_news_tab",
+    "news_content": "../../commponents/news/h_news_content/h_news_content"
+  }
 }

@@ -1,2 +1,6 @@
 <!--pages/news/news.wxml-->
-<text>pages/news/news.wxml</text>
+<!-- tab 导航栏 -->
+<news_tab bind:textControl="handleText"></news_tab>
+
+<news_content index="{{indexChecked}}" my_list="{{home_list}}"></news_content>
+
