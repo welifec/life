@@ -4,7 +4,8 @@
     "pages/me/me",
     "pages/news/news",
     "pages/serve/serve",
-    "pages/home/navto/rec-job/rec-job"
+    "pages/home/navto/rec-job/rec-job",
+    "pages/news/news_page/news_page"
   ],
   "window": {
     "backgroundTextStyle": "light",

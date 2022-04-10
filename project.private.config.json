@@ -23,6 +23,13 @@
           "name": "",
           "pathName": "pages/me/me",
           "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/news/news",
+          "query": "",
           "scene": null,
           "launchMode": "default"
         }

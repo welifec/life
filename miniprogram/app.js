@@ -4,7 +4,9 @@ App({
     openid: '',
     isflag: false,
     userInfo: [],
-    lg: ''
+    lg: '',
+    home_list: [],
+    checkLogin: false
   },
   onLaunch: function () {
     if (!wx.cloud) {
