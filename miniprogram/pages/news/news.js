@@ -16,7 +16,7 @@ Page({
   },
   onLoad: function() {
     request({
-      url: 'https://api.jisuapi.com/news/get?channel=头条&start=0&num=10&appkey=0a5c7b435f098f99',
+      url: 'https://api.jisuapi.com/news/get?channel=头条&start=0&num=10&appkey=9c4a04ec045a9a3c',
     }).then(res => {
       this.setData({
         home_list: res.data.result.list

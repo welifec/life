@@ -75,7 +75,7 @@ Component({
       //传递参数到新开页面
       const index = e.currentTarget.dataset.index;
       wx.navigateTo({
-        url: '/pages/news_page/news_page?index='+ index,
+        url: '/pages/news/news_page/news_page?index='+ index,
       })
     }
   },
