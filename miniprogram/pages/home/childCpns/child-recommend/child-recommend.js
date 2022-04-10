@@ -45,6 +45,10 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    handlejob() {
+      wx.navigateTo({
+        url: '/pages/home/navto/rec-job/rec-job',
+      })
+    }
   }
 })

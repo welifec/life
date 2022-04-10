@@ -1,0 +1,23 @@
+{
+  "cloudfunctionRoot": "lifec",
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [{
+        "name": "job",
+        "pathName": "pages/home/navto/rec-job/rec-job",
+        "query": "",
+        "scene": null,
+        "launchMode": "default"
+      }]
+    }
+  }
+}

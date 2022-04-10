@@ -1,0 +1,9 @@
+<view>
+  <view wx:if="{{isflag}}">
+    <image src="{{userInfo.avatarUrl}}"></image>
+    <text>{{userInfo.nickName}}</text>
+  </view>
+  <view wx:else> <button bindtap="handleLogin">登陆</button>
+  </view>
+</view>
+<button bindtap="get">a</button>
