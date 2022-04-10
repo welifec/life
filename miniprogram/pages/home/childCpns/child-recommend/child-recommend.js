@@ -47,7 +47,7 @@ Component({
   methods: {
     handlejob() {
       wx.navigateTo({
-        url: '/pages/home/childCpns/child-recommend/rec-job/rec-job',
+        url: '/pages/home/navto/rec-job/rec-job',
       })
     }
   }

@@ -1,5 +1,7 @@
 {
   "description": "项目配置文件，详见文档：%s",
+  "miniprogramRoot": "miniprogram/",
+  "cloudfunctionRoot": "cloundfunctions/",
   "packOptions": {
     "ignore": []
   },
@@ -20,7 +22,7 @@
     "checkInvalidKey": true,
     "checkSiteMap": true,
     "uploadWithSourceMap": true,
-    "compileHotReLoad": false,
+    "compileHotReLoad": true,
     "lazyloadPlaceholderEnable": false,
     "useMultiFrameRuntime": true,
     "useApiHook": true,
@@ -54,6 +56,7 @@
     "servePath": ""
   },
   "isGameTourist": false,
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
   "condition": {
     "search": {
       "list": []

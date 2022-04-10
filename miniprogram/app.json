@@ -4,7 +4,7 @@
     "pages/me/me",
     "pages/news/news",
     "pages/serve/serve",
-    "pages/home/childCpns/child-recommend/rec-job/rec-job"
+    "pages/home/navto/rec-job/rec-job"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -13,12 +13,12 @@
   },
   "tabBar": {
     "selectedColor": "#146EF0",
-    "list": [
-      {
+    "list": [{
         "pagePath": "pages/home/home",
         "text": "首页",
         "iconPath": "/assets/tabhome/tab_home.png",
         "selectedIconPath": "/assets/tabhome/tab_home_active.png"
+
       },
       {
         "pagePath": "pages/serve/serve",

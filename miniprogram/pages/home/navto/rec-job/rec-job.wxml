@@ -1,0 +1,9 @@
+<button bind:tap="handleadd">添加</button>
+<button bind:tap="handlebt">查询</button>
+<button bind:tap="handlelogin">登录</button>
+<button bind:tap="handle">按钮</button>
+<view>openid:{{openid}}</view>
+<view wx:for="{{list}}" wx:key="index">
+  <text>{{item.age}}</text>
+  <text>{{item.name}}</text>
+</view>
