@@ -27,37 +27,38 @@ Page({
     const db = wx.cloud.database({
       env: 'lifec-4gd9vflq226e701d'
     })
-    const _ = db.command
-    const openid = this.data.openid
-    console.log(openid);
-    db.collection('demo').where({
-      _id: openid
-    }).get({
-      success(res) {
-        console.log("---------", res.data.length);
-        if (res.data.length > 0) {
-          db.collection('demo').doc(openid).update({
-            data: {
-              list: _.push({ name: "bljboy", age: 18 })
-            }
-          })
-        } else {
-          console.log("无openid");
-          db.collection('demo').add({
-            data: {
-              _id: openid,
-              list: [{
-                name: 'bljboy',
-                age: 18
-              }]
-            },
-            success(res) {
-              console.log(res);
-            }
-          })
-        }
-      }
-    })
+    console.log("----", db);
+    // const _ = db.command
+    // const openid = this.data.openid
+    // console.log(openid);
+    // db.collection('demo').where({
+    //   _id: openid
+    // }).get({
+    //   success(res) {
+    //     console.log("---------", res.data.length);
+    //     if (res.data.length > 0) {
+    //       db.collection('demo').doc(openid).update({
+    //         data: {
+    //           list: _.push({ name: "bljboy", age: 18 })
+    //         }
+    //       })
+    //     } else {
+    //       console.log("无openid");
+    //       db.collection('demo').add({
+    //         data: {
+    //           _id: openid,
+    //           list: [{
+    //             name: 'bljboy',
+    //             age: 18
+    //           }]
+    //         },
+    //         success(res) {
+    //           console.log(res);
+    //         }
+    //       })
+    //     }
+    //   }
+    // })
   },
   handlebt() {
     const openid = this.data.openid;
