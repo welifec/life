@@ -13,14 +13,16 @@ Page({
   onLoad() {
     // let s = wx.getStorageSync('userInfoisFlag');
     let that = this;
-    const s = wx.getStorageSync('userInfoisFlag')
-    console.log(s);
-    if (s === true) {
+    const _userInfoisFlag = wx.getStorageSync('userInfoisFlag')
+    const _openid = wx.getStorageSync('openid')
+    console.log("_openid", _openid);
+    console.log("_userInfoisFlag", _userInfoisFlag);
+    if (_userInfoisFlag === true) {
       console.log("onLoad");
       const db = wx.cloud.database({
         env: 'lifec-4gd9vflq226e701d'
       })
-      db.collection(this.data.collections).doc("ohBhQ5YD0PGqWS7C0jbMFJfhz0so").get({
+      db.collection(this.data.collections).doc(_openid).get({
         success(res) {
           console.log(res);
           console.log(res.data.userInfoisFlag);
@@ -36,8 +38,6 @@ Page({
         userInfoisFlag: false
       })
     }
-
-
   },
   // 登陆按钮：登陆成功获取openid写入数据库
   handleLogin() {

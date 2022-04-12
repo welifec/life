@@ -1,9 +1,7 @@
 // app.js
 App({
   data: {
-    j: {
 
-    }
   },
   // 云函数环境
   onLaunch: function () {
@@ -15,7 +13,6 @@ App({
         traceUser: true,
       })
     }
-    this.globalData = {}
   },
   // 获取openid
   getopenid: function (that) {
@@ -30,6 +27,7 @@ App({
       that.setData({
         openid: res.result.openid
       })
+      wx.setStorageSync("openid", that.data.openid);
       // 调用数据库
       this.getdatabase(collections, that.data.openid, userInfoisFlag, name, imageURL)//接收赋值的openid
       console.log(that.data.openid);
