@@ -1,14 +1,24 @@
 // app.js
+import request from './service/network.js'
 App({
   data: {
     openid: '',
     isflag: false,
     userInfo: [],
     lg: '',
-    home_list: [],
     checkLogin: false
   },
   onLaunch: function () {
+    let that = this;
+    request({
+      url: 'https://api.jisuapi.com/news/get?channel=头条&start=0&num=10&appkey=9c4a04ec045a9a3c',
+    }).then(res => {
+      // console.log(res);
+      that.globalData.home_list = res.data.result.list;
+      // console.log(that.globalData.home_list);
+    }).catch(err => {
+      console.log(err);
+    })
     if (!wx.cloud) {
       console.error('请使用 2.2.3 或以上的基础库以使用云能力')
     } else {
@@ -17,7 +27,7 @@ App({
         traceUser: true,
       })
     }
-    this.globalData = {}
+    
   },
   onShow() {
     console.log("lg----", this.data.lg);
@@ -36,7 +46,8 @@ App({
     } else {
       console.log("app不存在用户:", this.data.isflag);
     }
-
-
+  },
+  globalData: {
+    home_list: [],
   }
 })
