@@ -7,7 +7,7 @@
   },
   "setting": {
     "urlCheck": false,
-    "es6": false,
+    "es6": true,
     "enhance": true,
     "postcss": true,
     "preloadBackgroundData": false,
@@ -44,7 +44,7 @@
     "ignoreUploadUnusedFiles": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.23.3",
+  "libVersion": "2.23.4",
   "appid": "wxcb4253405be02a3c",
   "projectname": "lifec",
   "debugOptions": {

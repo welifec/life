@@ -3,53 +3,63 @@ const app = getApp()
 Page({
   data: {
     openid: '',
-    isflag: false,
+    userInfoisFlag: false,
     userInfo: [],
-    lg: ''
+    lg: '',
+    collections: 'demo',
+    name: '',
+    imageURL: '',
   },
   onLoad() {
-    console.log("onShow");
-    wx.setStorageSync("lg", this.data.lg);
-    if (this.data.lg > 0) {
-      this.setData({
-        // this.data.isflag: true
-        lg: 1000
+    // let s = wx.getStorageSync('userInfoisFlag');
+    let that = this;
+    const s = wx.getStorageSync('userInfoisFlag')
+    console.log(s);
+    if (s === true) {
+      console.log("onLoad");
+      const db = wx.cloud.database({
+        env: 'lifec-4gd9vflq226e701d'
       })
-
-      // wx.setStorageSync("isflag", this.data.isflag);
-      console.log("存在用户:", this.data.isflag);
+      db.collection(this.data.collections).doc("ohBhQ5YD0PGqWS7C0jbMFJfhz0so").get({
+        success(res) {
+          console.log(res);
+          console.log(res.data.userInfoisFlag);
+          that.setData({
+            userInfoisFlag: res.data.userInfoisFlag,
+            name: res.data.name,
+            imageURL: res.data.imageURL
+          })
+        }
+      })
     } else {
-      // wx.setStorageSync("isflag", this.data.isflag);
-      console.log("不存在用户:", this.data.isflag);
+      that.setData({
+        userInfoisFlag: false
+      })
     }
+
+
   },
+  // 登陆按钮：登陆成功获取openid写入数据库
   handleLogin() {
+    var that = this;
     wx.getUserProfile({
       desc: '请求权限',
       success: (res) => {
-        // console.log(res.userInfo.nickName.length);
+        console.log(res);
         this.setData({
           userInfo: res.userInfo,
-          lg: res.userInfo.nickName.length
+          lg: res.userInfo.nickName.length,
+          name: res.userInfo.nickName,
+          imageURL: res.userInfo.avatarUrl,
+          userInfoisFlag: true
         })
-        // this.onLoad()
+        wx.setStorageSync("userInfoisFlag", this.data.userInfoisFlag);
+        // 调用全局方法获取openid,数据库
+        app.getopenid(that)
+      },
+      fail: (err) => {
+        console.log("err----------", err);
       }
     })
   },
-  getopenid() {
-    wx.cloud.callFunction({
-      name: 'getOpenid',
-      complete: res => {
-        console.log('云函数获取到的openid:', res.result.openid)
-        var openid = res.result.openid;
-        that.setData({
-          openid: openid
-        })
-      }
-    })
-  },
-  get() {
-    var num = 5;
-    wx.setStorageSync("num", num);
-  }
 })
