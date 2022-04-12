@@ -33,18 +33,24 @@
 }
 .infoBox1 {
   width: 407rpx;
-  height: 71rpx;
+  height: 85rpx;
   overflow-wrap: break-word;
   color: rgba(34,34,34,1);
   font-size: 30rpx;
   font-family: PingFang-SC-Medium;
   text-align: justifyLeft;
-  line-height: 42rpx;
-  display:inline-block;
+  line-height: 40rpx;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;/*文字占几行*/
+  -webkit-box-orient: vertical;
 }
+
 .mod2 {
   width: 290rpx;
-  height: 25rpx;
+  height: 20rpx;
   margin-top: 24rpx;
   flex-direction: row;
   display: flex;

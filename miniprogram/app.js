@@ -11,16 +11,22 @@ App({
 
   }, 
    globalData: {
-    home_list: [],
+    notice: [],
+    media:[],
+    news:[],
+    dynamic:[],
   },
   // 云函数环境
   onLaunch: function () {
     let that = this;
     request({
-      url: 'https://api.jisuapi.com/news/get?channel=头条&start=0&num=10&appkey=9c4a04ec045a9a3c',
+      url: 'http://114.132.247.227/notice.json',
     }).then(res => {
-      // console.log(res);
-      that.globalData.home_list = res.data.result.list;
+      console.log(res);
+      that.globalData.notice = res.data.notice;
+      that.globalData.media = res.data.media;
+      that.globalData.news = res.data.news;
+      that.globalData.dynamic = res.data.dynamic;
       // console.log(that.globalData.home_list);
     }).catch(err => {
       console.log(err);

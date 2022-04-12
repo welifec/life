@@ -1,3 +1,6 @@
 <!--pages/news_page/news_page.wxml-->
 <!-- 接收数据，显示页面 -->
-<web-view src="{{url}}"></web-view>
+<web-view src="{{url}}">
+
+
+</web-view>

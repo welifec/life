@@ -3,7 +3,10 @@ import request from '../../service/network.js'
 Page({
   data: {
     indexChecked: 0,
-    home_list: [],
+    notice: [],
+    media:[],
+    news:[],
+    dynamic:[],
     test: false,
   },
   handleText(e) {
@@ -16,10 +19,14 @@ Page({
   },
   onLoad: function() {
     request({
-      url: 'https://api.jisuapi.com/news/get?channel=头条&start=0&num=10&appkey=9c4a04ec045a9a3c',
+      url: 'http://114.132.247.227/notice.json',
     }).then(res => {
+      console.log(res);
       this.setData({
-        home_list: res.data.result.list
+        notice: res.data.notice,
+        media: res.data.media,
+        news: res.data.news,
+        dynamic: res.data.dynamic,
       })
     })
     // console.log(list); 

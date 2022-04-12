@@ -2,5 +2,4 @@
 <!-- tab 导航栏 -->
 <news_tab bind:textControl="handleText"></news_tab>
 
-<news_content index="{{indexChecked}}" my_list="{{home_list}}"></news_content>
-
+<news_content index="{{indexChecked}}" notice="{{notice}}" media="{{media}}" news="{{news}}" dynamic="{{dynamic}}"></news_content>

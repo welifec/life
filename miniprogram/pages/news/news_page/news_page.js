@@ -16,8 +16,25 @@ Page({
     console.log(options);
     let index = options.index;
     let app = getApp();
-    this.setData({
-      url: app.globalData.home_list[index].weburl
-    })
+    if(options.num == 1){
+      this.setData({
+        url: app.globalData.notice[index].url
+      })
+    }
+    if(options.num == 2){
+      this.setData({
+        url: app.globalData.media[index].url
+      })
+    }
+    if(options.num == 3){
+      this.setData({
+        url: app.globalData.news[index].url
+      })
+    }
+    if(options.num == 4){
+      this.setData({
+        url: app.globalData.dynamic[index].url
+      })
+    }
   },
 })
