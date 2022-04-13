@@ -1,9 +1,23 @@
-<view>
-  <view wx:if="{{userInfoisFlag}}">
+<view class="me">
+  <view wx:if="{{userInfoisFlag}}" class="me-if">
     <image src="{{imageURL}}"></image>
     <text>{{name}}</text>
   </view>
-  <view wx:else> <button bindtap="handleLogin">登陆</button>
+  <view wx:else class="me-else">
+    <image src="/assets/me/head.png" class="me-else-image"></image>
+    <view class="me-else-view2">
+      <button bindtap="handleLogin">点击登录</button>
+    </view>
+  </view>
+  <view class="me-model">
+    <view class="me-model-item1">
+      <image src="/assets/me/kefu.png" class="me-else-image"></image><text>联系客服</text>
+    </view>
+    <view class="me-model-item2">
+      <image src="/assets/me/fankui.png" class="me-else-image"></image><text>意见反馈</text>
+    </view>
+  </view>
+  <view wx:if="{{userInfoisFlag}}" class="me-exit">
+  <button bind:tap="exit">退出登录</button>
   </view>
 </view>
-<button bindtap="get">a</button>

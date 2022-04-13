@@ -1,9 +1,27 @@
-<button bind:tap="handleadd">添加</button>
-<button bind:tap="handlebt">查询</button>
-<button bind:tap="handlelogin">登录</button>
-<button bind:tap="handle">按钮</button>
-<view>openid:{{openid}}</view>
-<view wx:for="{{list}}" wx:key="index">
-  <text>{{item.age}}</text>
-  <text>{{item.name}}</text>
+<view class="s">
+
+  <block wx:for="{{list}}" wx:key="index">
+    <block wx:for="{{item.list}}" wx:key="index">
+      <view class="rec-job-list">
+        <view class="rec-job-list-box-text3"><text>{{item.money}}</text></view>
+        <view class="rec-job-list-box">
+          <text style="color: #146EF0;" class="rec-job-list-box-text1">【日结】</text>
+          <text class="rec-job-list-box-text2">{{item.title}}</text>
+        </view>
+        <view class="rec-job-list-box2">
+          <image src="/assets/nav_to/nav_to_ip.png" class="rec-job-list-box2-image1"></image>
+          <text class="rec-job-list-box2-text1">{{item.place}}</text>
+        </view>
+        <view class="rec-job-list-box2">
+          <image src="/assets/nav_to/nav_to_time.png" class="rec-job-list-box2-image1"></image>
+          <text class="rec-job-list-box2-text1">{{item.time}}</text>
+        </view>
+        <view class="rec-job-list-box2">
+          <image src="/assets/nav_to/nav_to_phone.png" class="rec-job-list-box2-image1"></image>
+          <text class="rec-job-list-box2-text1">{{item.phone}}</text>
+        </view>
+      </view>
+    </block>
+  </block>
+  <fabutton class="fabutton" bindtap="handlePush"></fabutton>
 </view>

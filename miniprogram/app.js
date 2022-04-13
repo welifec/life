@@ -2,13 +2,6 @@
 import request from './service/network.js'
 App({
   data: {
-
-    openid: '',
-    isflag: false,
-    userInfo: [],
-    lg: '',
-    checkLogin: false
-
   }, 
    globalData: {
     home_list: [],

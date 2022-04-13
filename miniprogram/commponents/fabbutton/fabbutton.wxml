@@ -1,0 +1,10 @@
+<view class="rec-job" bind:tap="handlePush">
+    <view class="rec-job-item">
+      <view class="rec-job-ImageText">
+        <view class="rec-job-item-box">
+          <image mode='aspectFill' src='/assets/nav_to/nav_to_push.png' class='rec-job-item-image'></image>
+          <view class="rec-job-item-text"><text>发布</text></view>
+        </view>
+      </view>
+    </view>
+  </view>

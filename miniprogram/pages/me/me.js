@@ -4,11 +4,26 @@ Page({
   data: {
     openid: '',
     userInfoisFlag: false,
-    userInfo: [],
-    lg: '',
     collections: 'demo',
     name: '',
     imageURL: '',
+  },
+  exit() {
+    const that = this
+    wx.showModal({
+      title: '是否确认退出登录',
+      content: '',
+      success(res) {
+        if (res.confirm) {
+          wx.removeStorageSync("userInfoisFlag")
+          wx.removeStorageSync("openid")
+          that.setData({
+            userInfoisFlag: false
+          })
+        } else if (res.cancel) {
+        }
+      }
+    })
   },
   onLoad() {
     // let s = wx.getStorageSync('userInfoisFlag');

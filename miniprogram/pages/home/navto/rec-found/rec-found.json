@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "fabutton": "../../../../commponents/fabbutton/fabbutton"
+  },
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "失物招领",
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationBarTextStyle": "black"
+}

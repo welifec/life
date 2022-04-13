@@ -30,6 +30,34 @@
           "name": "",
           "pathName": "pages/news/news",
           "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/home/navto/rec-job/job-push/job-push",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/home/navto/rec-job/job-push/job-push",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/home/navto/rec-found/rec-found",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/home/navto/rec-found/found-push/found-push",
+          "query": "",
           "scene": null,
           "launchMode": "default"
         }

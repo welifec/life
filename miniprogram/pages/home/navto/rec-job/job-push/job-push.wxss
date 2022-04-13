@@ -1,0 +1,65 @@
+page {
+  /* background-color: #F5F5F5; */
+  background-color: #F5F5F5;
+  height: 132rpx;
+}
+
+.job-push-list {
+  flex-direction: column;
+  display: flex;
+  margin-top: 30rpx;
+  background-color: #FFFFFF;
+}
+
+.job-push-list view {
+  height: 132rpx;
+}
+
+.job-push-list view input {
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  margin-left: 30rpx;
+  margin-top: 25rpx;
+  margin-bottom: 26rpx;
+}
+
+.placeholder-class {
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #CCCCCC;
+}
+
+.job-push-list view text {
+  width: 47rpx;
+  height: 22rpx;
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #545454;
+  margin: 30rpx 0 80rpx 30rpx;
+}
+
+.job-push-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 320rpx;
+  background-color: #FFFFFF;
+  margin-bottom: 64rpx;
+}
+
+.job-push-button button {
+  width: 690rpx;
+  height: 88rpx;
+  background: #146EF0;
+  border-radius: 40rpx;
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  text-align: center;
+  color: #FEFEFE;
+  margin: 170rpx 30rpx 62rpx 30rpx;
+
+}

@@ -1,0 +1,35 @@
+<view class="job-push">
+  <view class="job-push-list">
+    <view>
+      <text>标题</text>
+      <input type="text" bindinput="_inputTitle" placeholder="请输入标题" maxlength="10" placeholder-class="placeholder-class" />
+    </view>
+    <view>
+      <text>丢失地点</text>
+      <input type="text" bindinput="_inputPlace" placeholder="请输入物品丢失的地点" maxlength="15" placeholder-class="placeholder-class" />
+    </view>
+    <view>
+      <text>物品类型</text>
+      <input type="text" bindinput="_inputMold" placeholder="请输入具体的物品" maxlength="15" placeholder-class="placeholder-class" />
+    </view>
+
+    <view>
+      <text>丢失时间</text>
+      <input type="text" bindinput="_inputTime" placeholder="点击选择时间" maxlength="15" placeholder-class="placeholder-class" />
+    </view>
+
+    <view class="found-push-des">
+      <text>描述</text>
+      <textarea bindinput="_handleDes" placeholder="请描述详细内容" placeholder-class="placeholder-class" show-confirm-bar=""></textarea>
+    </view>
+
+    <view class="found-push-image">
+      <block wx:for="{{list.images}}" wx:key="index">
+        <image bindtap="upload" src="{{item}}" mode="aspectFitf"></image>
+      </block>
+    </view>
+  </view>
+  <view class="job-push-button">
+    <button bind:tap="_handlePush">发布</button>
+  </view>
+</view>
