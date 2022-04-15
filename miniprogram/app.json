@@ -11,7 +11,10 @@
     "pages/home/navto/rec-chat/rec-chat",
     "pages/home/navto/rec-buy/rec-buy",
     "pages/home/navto/rec-found/found-push/found-push",
-    "pages/home/navto/rec-found/lost-push/lost-push"
+    "pages/home/navto/rec-found/lost-push/lost-push",
+    "pages/home/navto/web-view/web-view",
+    "pages/home/navto/web-view2/web-view2",
+    "pages/home/navto/rec-chat/chat-push/chat-push"
   ],
   "window": {
     "backgroundTextStyle": "light",

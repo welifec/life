@@ -1,0 +1,11 @@
+<view class="chat-push">
+  <view class="chat-push-item1">
+    <textarea placeholder="输入你想的内容..." bindinput="handleInput"></textarea>
+  </view>
+  <view class="chat-push-item2">
+      <block wx:for="{{list.imageList}}" wx:key="index">
+        <image src="{{item}}" bind:tap="handleImage"></image>
+    </block>
+  </view>
+  <view class="chat-push-item3"><button bindtap="handlePush">发布</button></view>
+</view>

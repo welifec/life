@@ -18,6 +18,15 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    handleTo(e) {
+      wx.navigateTo({
+        url: '/pages/home/navto/web-view/web-view',
+      })
+    },
+    handleTo2(e) {
+      wx.navigateTo({
+        url: '/pages/home/navto/web-view2/web-view2',
+      })
+    }
   }
 })

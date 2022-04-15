@@ -1,0 +1,43 @@
+page {
+  background: #F5F5F5;
+}
+
+.chat-push-item1 {
+  width: 686rpx;
+  height: 300rpx;
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #222222;
+  line-height: 48rpx;
+  margin: 30rpx 33rpx 0 31rpx;
+}
+
+.chat-push-item2 {
+  margin: 47rpx 0 0 36rpx;
+  display: flex;
+  flex-direction: row;
+  align-content: space-around;
+  justify-content: space-around;
+}
+
+.chat-push-item2 image {
+  width: 226rpx;
+  height: 226rpx;
+}
+
+.chat-push-item3 {
+  margin: 634rpx 30rpx 102rpx 30rpx;
+}
+
+.chat-push-item3 button {
+  width: 690rpx;
+  height: 88rpx;
+  background: #146EF0;
+  border-radius: 40rpx;
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #FEFEFE;
+  text-align: center;
+}

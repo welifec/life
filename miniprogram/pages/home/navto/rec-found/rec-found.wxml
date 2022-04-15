@@ -1,4 +1,5 @@
 <view class="rec-found">
+  <!-- 顶部tabbar -->
   <view class="rec-found-head">
     <view bindtap="navSwitch" class="{{navState==0 ? 'nav-switch-style':''}}" data-index="0">
       <text>寻物</text>
@@ -13,6 +14,7 @@
       <view></view>
     </view>
   </view>
+  <!-- 点击按钮切换页面 -->
   <view class="content">
     <view wx:if="{{navState==0}}" class="style-roll">
     </view>
@@ -20,79 +22,25 @@
     </view>
     <view wx:else="{{navState==2}}" class="style-default">
     </view>
-    <!-- 滑动页 -->
+    <!-- 滑动切换页面 -->
     <swiper bindchange="bindchange" current="{{navState}}" style="height: {{swiperHeight}}rpx;">
+      <!-- 寻物页面 -->
       <swiper-item>
-        <block wx:for="{{list}}" wx:key="index">
-          <block wx:for="{{item.list}}">
-            <view class="rec-found-list">
-              <view class="rec-found-list-item2"><text>寻找中</text></view>
-              <view class="rec-found-list-item">
-                <text class="rec-found-list-item-text1">【招领】</text>
-                <text class="rec-found-list-item-text2">{{item.title}}</text>
-              </view>
-              <view class="rec-found-list-item3">
-                <view>
-                  <view><text>发布时间：{{item.time}}</text></view>
-                </view>
-                <view>
-                  <view><text>地点：{{item.place}}</text></view>
-                </view>
-                <view>
-                  <view><text>招领类型：{{item.des}}</text></view>
-                </view>
-              </view>
-            </view>
-          </block>
-        </block>
+        <found-page></found-page>
+      </swiper-item>
+      <!-- 招领页面 -->
+      <swiper-item>
+        <lost-page></lost-page>
       </swiper-item>
       <swiper-item>
-        <view class="rec-found-list">
-          <view class="rec-found-list-item2"><text>寻找中</text></view>
-          <view class="rec-found-list-item">
-            <text class="rec-found-list-item-text1">【招领】</text>
-            <text class="rec-found-list-item-text2">丢失一个手表</text>
-          </view>
-          <view class="rec-found-list-item3">
-            <view>
-              <view><text>发布时间：2022-04-02</text></view>
-            </view>
-            <view>
-              <view><text>地点：教学楼12栋506教室</text></view>
-            </view>
-            <view>
-              <view class="found-f"><text>招领类型：手表</text></view>
-            </view>
-          </view>
-        </view>
-      </swiper-item>
-      <swiper-item>
-        <view class="rec-found-list">
-          <view class="rec-found-list-item2"><text>寻找中</text></view>
-          <view class="rec-found-list-item">
-            <text class="rec-found-list-item-text1">【招领】</text>
-            <text class="rec-found-list-item-text2">丢失一个手表</text>
-          </view>
-          <view class="rec-found-list-item3">
-            <view>
-              <view><text>发布时间：2022-04-02</text></view>
-            </view>
-            <view>
-              <view><text>地点：教学楼12栋506教室</text></view>
-            </view>
-            <view>
-              <view><text>招领类型：手表</text></view>
-            </view>
-          </view>
-        </view>
+        <mine-page></mine-page>
       </swiper-item>
     </swiper>
     <view wx:if="{{navState==0}}" bind:tap="fabutton" data-index="0">
       <fabutton class="fabutton "></fabutton>
     </view>
-    <view wx:if="{{navState==1}}" bind:tap="handlePush" data-index="1">
+    <view wx:if="{{navState==1}}" bind:tap="fabutton" data-index="1">
       <fabutton class="fabutton"></fabutton>
     </view>
   </view>
-
 </view>

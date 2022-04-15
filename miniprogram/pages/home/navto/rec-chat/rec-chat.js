@@ -1,66 +1,55 @@
 // pages/home/navto/rec-chat/rec-chat.js
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    list: [],
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onShow() { this.onhandle() },
+  onLoad() { this.onhandle() },
+  // 通过云函数遍历集合getLsot
+  onhandle() {
+    wx.cloud.callFunction({
+      name: 'getChat',
+    }).then(res => {
+      this.setData({
+        list: res.result
+      })
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  onPullDownRefresh() {
+    wx.cloud.callFunction({
+      name: 'getChat',
+    }).then(res => {
+      this.setData({
+        list: res.result
+      })
+      this.handlePullRefresh()
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  handlePullRefresh() {
+    wx.stopPullDownRefresh({
+      success: (res) => {
+        wx.showToast({
+          title: '刷新成功',
+          duration: 3000,
+          icon: "none"
+        })
+      },
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  fabutton() {
+    const userInfoisFlag = wx.getStorageSync('userInfoisFlag')
+    if (userInfoisFlag === true) {
+      wx.navigateTo({
+        url: '/pages/home/navto/rec-chat/chat-push/chat-push',
+      })
+    } else {
+      wx.showToast({
+        title: "请授权登录账号",
+        duration: 3000,
+        icon: 'none',
+        mask: false
+      })
+    }
   }
 })

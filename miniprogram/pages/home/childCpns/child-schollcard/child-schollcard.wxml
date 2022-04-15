@@ -1,5 +1,5 @@
 <view class="home-scholl">
-  <view class="home-scholl-item">
+  <view class="home-scholl-item" bindtap="handleTo" data-index="{{index}}">
     <view class="home-scholl-item-bg1">
       <view class="home-scholl-font">
         <text class="home-scholl-font1">校园号</text>
@@ -11,7 +11,7 @@
     </view>
   </view>
 
-  <view class="home-scholl-item">
+  <view class="home-scholl-item" bindtap="handleTo2">
     <view class="home-scholl-item-bg2">
       <view class="home-scholl-font">
         <text class="home-scholl-font1">学生团体</text>

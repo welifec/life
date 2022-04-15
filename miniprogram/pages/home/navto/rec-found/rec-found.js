@@ -13,6 +13,8 @@ Page({
     console.log(this.data.list);
     this.onhandle()
   },
+
+  // 通过云函数遍历集合getLsot
   onhandle() {
     wx.cloud.callFunction({
       name: 'getFound',
@@ -22,30 +24,10 @@ Page({
       })
     })
   },
-  onPullDownRefresh() {
-    wx.cloud.callFunction({
-      name: 'getFound',
-    }).then(res => {
-      this.setData({
-        list: res.result
-      })
-      this.handlePullRefresh()
-    })
-  },
-  handlePullRefresh() {
-    wx.stopPullDownRefresh({
-      success: (res) => {
-        wx.showToast({
-          title: '刷新成功',
-          duration: 3000,
-          icon: "none"
-        })
-      },
-    })
-  },
 
+  // 点击发布按钮，判断账号是否登陆
   handlePush() {
-    console.log("handlePush");
+    // console.log("handlePush");
     const userInfoisFlag = wx.getStorageSync('userInfoisFlag')
     if (userInfoisFlag === true) {
       this.fabutton()
@@ -58,8 +40,7 @@ Page({
       })
     }
   },
-
-
+  // fab悬浮按钮判断根据当前跳转相应页面页面
   fabutton(e) {
     if (e.currentTarget.dataset.index == 0) {
       wx.navigateTo({
@@ -71,13 +52,15 @@ Page({
       })
     }
   },
+  // 监听点击tabbar
   navSwitch(e) {
     // console.log(e.currentTarget.dataset.index)
     let index = e.currentTarget.dataset.index;
     this.setData({
       navState: index
     })
-  }, //监听滑块
+  },
+  //监听滑块
   bindchange(e) {
     // console.log(e.detail.current)
     let index = e.detail.current;
@@ -85,6 +68,7 @@ Page({
       navState: index
     })
   },
+  // 自适应Swiper高度
   getSwiperHeight() {
     let that = this;//将this另存为
     wx.getSystemInfo({

@@ -2,8 +2,8 @@
 import request from './service/network.js'
 App({
   data: {
-  }, 
-   globalData: {
+  },
+  globalData: {
     home_list: [],
   },
   // 云函数环境
@@ -42,7 +42,7 @@ App({
       })
       wx.setStorageSync("openid", that.data.openid);
       // 调用数据库
-      this.getdatabase(collections, that.data.openid, userInfoisFlag, name, imageURL)//接收赋值的openid
+      this.getdatabase("login", that.data.openid, userInfoisFlag, name, imageURL)//接收赋值的openid
       console.log(that.data.openid);
     })
   },

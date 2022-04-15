@@ -1,0 +1,24 @@
+<scroll-view scroll-y="true" refresher-enabled="true" bindrefresherrefresh="onRefresh" refresher-triggered="{{triggered}}">
+  <block wx:for="{{list}}" wx:key="index">
+    <block wx:for="{{item.list}}" wx:key="index">
+      <view class="rec-found-list">
+        <view class="rec-found-list-item2"><text>寻找中</text></view>
+        <view class="rec-found-list-item">
+          <text class="rec-found-list-item-text1">【招领】</text>
+          <text class="rec-found-list-item-text2">{{item.title}}</text>
+        </view>
+        <view class="rec-found-list-item3">
+          <view>
+            <view><text>发布时间：{{item.time}}</text></view>
+          </view>
+          <view>
+            <view><text>地点：{{item.place}}</text></view>
+          </view>
+          <view>
+            <view class="found-f"><text>招领类型：{{item.des}}</text></view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </block>
+</scroll-view>

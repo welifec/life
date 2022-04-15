@@ -111,7 +111,9 @@ page {
   margin: 926rpx 36rpx 72rpx 594rpx;
 
 }
-
+swiper-item {
+  overflow: scroll;
+}
 .rec-job-item {
   width: 46rpx;
   height: 75rpx;
