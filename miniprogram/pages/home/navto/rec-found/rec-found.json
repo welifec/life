@@ -1,0 +1,13 @@
+{
+  "component": true,
+  "usingComponents": {
+    "fabutton": "../../../../commponents/fabbutton/fabbutton",
+    "lost-page": "../../../../commponents/lost-page/lost-page",
+    "found-page": "../../../../commponents/found-page/found-page",
+    "mine-page": "../../../../commponents/mine-page/mine-page"
+
+  },
+  "navigationBarTitleText": "失物招领",
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationBarTextStyle": "black"
+}

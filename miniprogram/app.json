@@ -5,7 +5,16 @@
     "pages/news/news",
     "pages/serve/serve",
     "pages/home/navto/rec-job/rec-job",
-    "pages/news/news_page/news_page"
+    "pages/news/news_page/news_page",
+    "pages/home/navto/rec-job/job-push/job-push",
+    "pages/home/navto/rec-found/rec-found",
+    "pages/home/navto/rec-chat/rec-chat",
+    "pages/home/navto/rec-buy/rec-buy",
+    "pages/home/navto/rec-found/found-push/found-push",
+    "pages/home/navto/rec-found/lost-push/lost-push",
+    "pages/home/navto/web-view/web-view",
+    "pages/home/navto/web-view2/web-view2",
+    "pages/home/navto/rec-chat/chat-push/chat-push"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -20,13 +29,6 @@
         "text": "首页",
         "iconPath": "/assets/tabhome/tab_home.png",
         "selectedIconPath": "/assets/tabhome/tab_home_active.png"
-
-      },
-      {
-        "pagePath": "pages/serve/serve",
-        "text": "服务",
-        "iconPath": "/assets/tabhome/tab_serve.png",
-        "selectedIconPath": "/assets/tabhome/tab_serve_active.png"
       },
       {
         "pagePath": "pages/news/news",

@@ -2,19 +2,19 @@
 import request from './service/network.js'
 App({
   data: {
-
     openid: '',
     isflag: false,
     userInfo: [],
     lg: '',
     checkLogin: false
 
-  }, 
-   globalData: {
+  },
+  globalData: {
     notice: [],
-    media:[],
-    news:[],
-    dynamic:[],
+    media: [],
+    news: [],
+    dynamic: [],
+
   },
   // 云函数环境
   onLaunch: function () {
@@ -28,7 +28,7 @@ App({
       that.globalData.dynamic = res.data.dynamic;
       // console.log(that.globalData.home_list);
     }).catch(err => {
-      console.log(err,'获取接口错误');
+      console.log(err, '获取接口错误');
     })
     if (!wx.cloud) {
       console.error('请使用 2.2.3 或以上的基础库以使用云能力')
@@ -54,7 +54,7 @@ App({
       })
       wx.setStorageSync("openid", that.data.openid);
       // 调用数据库
-      this.getdatabase(collections, that.data.openid, userInfoisFlag, name, imageURL)//接收赋值的openid
+      this.getdatabase("login", that.data.openid, userInfoisFlag, name, imageURL)//接收赋值的openid
       console.log(that.data.openid);
     })
   },

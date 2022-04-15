@@ -1,0 +1,40 @@
+<scroll-view scroll-y="true">
+  <view class="chat">
+    <block wx:for="{{list}}" wx:key="index">
+      <block wx:for="{{item.list}}" wx:key="index">
+        <view class="chat-list">
+          <view class="chat-list1-item1">
+            <!-- /assets/me/kefu.png -->
+            <image src="{{item.headimage}}"></image>
+            <view>
+              <text class="chat-list1-item1-text1">{{item.name}}</text>
+              <text class="chat-list1-item1-text2">{{item.time}}</text>
+            </view>
+          </view>
+          <view class="chat-list1-item2"><text>{{item.text}}</text></view>
+          <view class="chat-list1-item3">
+            <image src="{{item.imageList}}"></image>
+            <image></image>
+            <image></image>
+          </view>
+          <view class="chat-list1-item4">
+            <view class="chat-list1-item4-it1">
+              <image src="/assets/mchat/liulan.png"></image>
+              <text>浏览</text>
+            </view>
+            <view class="chat-list1-item4-it2">
+              <image src="/assets/mchat/pinglun.png"></image>
+              <text>回复</text>
+            </view>
+            <view class="chat-list1-item4-it3">
+              <image src="/assets/mchat/undianzan.png"></image>
+              <text>点赞</text>
+            </view>
+          </view>
+        </view>
+      </block>
+    </block>
+
+    <fabutton class="fabutton" bindtap="fabutton"></fabutton>
+  </view>
+</scroll-view>

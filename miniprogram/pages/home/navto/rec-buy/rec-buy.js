@@ -1,4 +1,4 @@
-// pages/home/childCpns/child-recommend/rec-job/rec-job.js
+// pages/home/navto/rec-buy/rec-buy.js
 Page({
 
   /**

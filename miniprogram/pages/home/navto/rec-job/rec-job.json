@@ -1,3 +1,12 @@
 {
-  "usingComponents": {}
+  "component": true,
+  "usingComponents": {
+    "fabutton": "../../../../commponents/fabbutton/fabbutton"
+  },
+  "backgroundTextStyle": "dark",
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "兼职",
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#FFFFFF"
+
 }

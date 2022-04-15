@@ -1,1 +1,142 @@
-/* pages/home/navto/rec-job/rec-job.wxss */
+page {
+  background: #F5F5F5;
+}
+
+.s {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 1;
+}
+
+.rec-job-list {
+  width: 690rpx;
+  background: #FFFFFF;
+  border-radius: 30rpx;
+  margin: 30rpx 30rpx 30rpx 30rpx;
+}
+
+.rec-job-list-box {
+  display: flex;
+  word-break: keep-all;
+  margin-top: 42rpx;
+}
+
+.rec-job-list-box-text1 {
+  margin-left: 35rpx;
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #146EF0;
+}
+
+.rec-job-list-box-text2 {
+  margin-left: 18rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #222222;
+  font-size: 30rpx;
+}
+
+.rec-job-list-box-text3 {
+  position: absolute;
+  margin: 42rpx 30rpx 243rpx 553rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  font-size: 30rpx;
+  color: #E7615B;
+  right: 30rpx;
+}
+
+.rec-job-list-box2 {
+  display: flex;
+  margin: 51rpx 305rpx 45rpx 35rpx;
+}
+
+.rec-job-list-box2-image1 {
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 24rpx;
+  margin-top: 6rpx;
+}
+
+.rec-job-list-box2-text1 {
+  word-break: keep-all;
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #545454;
+  margin-bottom: -45rpx;
+}
+
+
+.rec-job {
+  box-shadow: 0px 4px 10px 1px rgba(128, 115, 115, 0.200000);
+  background-color: rgba(20, 110, 240, 1.000000);
+  border-radius: 50%;
+  height: 120rpx;
+  width: 120rpx;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 2;
+  margin: 926rpx 36rpx 72rpx 594rpx;
+
+}
+
+.rec-job-item {
+  width: 46rpx;
+  height: 75rpx;
+  display: flex;
+  flex-direction: row;
+  margin: 23rpx 0 0 37rpx;
+}
+
+.rec-job-ImageText {
+  height: 75rpx;
+  display: flex;
+  flex-direction: column;
+  width: 46rpx;
+}
+
+.rec-job-item-box {
+  width: 46rpx;
+  height: 75rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.rec-job-item-text {
+  height: 23rpx;
+  margin-top: 12rpx;
+  display: flex;
+  flex-direction: column;
+  width: 46rpx;
+}
+
+.rec-job-item-text text {
+  width: 46rpx;
+  height: 23rpx;
+  overflow-wrap: break-word;
+  color: rgba(255, 255, 255, 1);
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular;
+  text-align: left;
+  white-space: nowrap;
+  line-height: 24rpx;
+  display: block;
+}
+
+.rec-job-item-image {
+  width: 42rpx;
+  height: 40rpx;
+  margin-left: 2rpx;
+}
+
+.fabutton {
+  display: flex;
+  position: fixed;
+  bottom: 0rpx;
+  margin: 0 36rpx 72rpx 594rpx;
+}

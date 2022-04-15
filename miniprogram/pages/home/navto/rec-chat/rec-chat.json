@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "fabutton": "../../../../commponents/fabbutton/fabbutton"
+  },
+  "navigationBarTitleText": "闲聊",
+  "backgroundTextStyle": "dark",
+  "enablePullDownRefresh": true,
+  "navigationBarTextStyle": "white"
+}

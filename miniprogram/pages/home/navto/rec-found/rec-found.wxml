@@ -1,0 +1,46 @@
+<view class="rec-found">
+  <!-- 顶部tabbar -->
+  <view class="rec-found-head">
+    <view bindtap="navSwitch" class="{{navState==0 ? 'nav-switch-style':''}}" data-index="0">
+      <text>寻物</text>
+      <view></view>
+    </view>
+    <view bindtap="navSwitch" class="{{navState==1 ? 'nav-switch-style':''}}" data-index="1">
+      <text>招领</text>
+      <view></view>
+    </view>
+    <view bindtap="navSwitch" class="{{navState==2 ? 'nav-switch-style':''}}" data-index="2">
+      <text>我的</text>
+      <view></view>
+    </view>
+  </view>
+  <!-- 点击按钮切换页面 -->
+  <view class="content">
+    <view wx:if="{{navState==0}}" class="style-roll">
+    </view>
+    <view wx:elif="{{navState==1}}" class="style-default">
+    </view>
+    <view wx:else="{{navState==2}}" class="style-default">
+    </view>
+    <!-- 滑动切换页面 -->
+    <swiper bindchange="bindchange" current="{{navState}}" style="height: {{swiperHeight}}rpx;">
+      <!-- 寻物页面 -->
+      <swiper-item>
+        <found-page></found-page>
+      </swiper-item>
+      <!-- 招领页面 -->
+      <swiper-item>
+        <lost-page></lost-page>
+      </swiper-item>
+      <swiper-item>
+        <mine-page></mine-page>
+      </swiper-item>
+    </swiper>
+    <view wx:if="{{navState==0}}" bind:tap="fabutton" data-index="0">
+      <fabutton class="fabutton "></fabutton>
+    </view>
+    <view wx:if="{{navState==1}}" bind:tap="fabutton" data-index="1">
+      <fabutton class="fabutton"></fabutton>
+    </view>
+  </view>
+</view>

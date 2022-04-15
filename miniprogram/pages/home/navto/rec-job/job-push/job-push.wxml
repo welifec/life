@@ -1,0 +1,34 @@
+<view class="job-push">
+  <view class="job-push-list">
+    <view>
+      <text>标题</text>
+      <input type="text" bindinput="_inputTitle" placeholder="请输入标题" maxlength="10" placeholder-class="placeholder-class" />
+    </view>
+    <view>
+      <text>工作地点</text>
+      <input type="text" bindinput="_inputPlace" placeholder="请输入具体工作地点" maxlength="15" placeholder-class="placeholder-class" />
+    </view>
+
+    <view>
+      <text>工作时间</text>
+      <input type="text" bindinput="_inputTime" placeholder="请输入具体工作时间" maxlength="15" placeholder-class="placeholder-class" />
+    </view>
+
+    <view>
+      <text>联系方式</text>
+      <input type="text" bindinput="_inputPhone" placeholder="请输入联系方式" maxlength="15" placeholder-class="placeholder-class" />
+    </view>
+
+    <view>
+      <text>工资类型</text>
+      <input placeholder="日结or月结" placeholder-class="placeholder-class" />
+    </view>
+    <view>
+      <text>工资</text>
+      <input type="text" bindinput="_inputMoney" placeholder="请选择薪资" maxlength="15" placeholder-class="placeholder-class" />
+    </view>
+  </view>
+  <view class="job-push-button">
+    <button bind:tap="_handlePush">发布</button>
+  </view>
+</view>

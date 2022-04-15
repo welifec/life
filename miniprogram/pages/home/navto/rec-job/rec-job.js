@@ -2,95 +2,59 @@
 const app = getApp()
 Page({
   data: {
-    imagePath: [],
-    openid: '',
     list: [],
   },
   onLoad() {
-    // this.handlelogin()
+    this.onhandle()
+  },
+  onShow() {
+    this.onhandle()
   },
 
-  handlelogin() {
-    let that = this;
-    wx.cloud.callFunction({
-      name: 'getOpenid',
-      complete: res => {
-        console.log('云函数获取到的openid:', res.result.openid)
-        var openid = res.result.openid;
-        that.setData({
-          openid: openid
-        })
-      }
-    })
+  handlePush() {
+    console.log("handlePush");
+    const userInfoisFlag = wx.getStorageSync('userInfoisFlag')
+    if (userInfoisFlag === true) {
+      wx.navigateTo({
+        url: '/pages/home/navto/rec-job/job-push/job-push',
+      })
+    } else {
+      wx.showToast({
+        title: "请授权登录账号",
+        duration: 3000,
+        icon: 'none',
+        mask: false
+      })
+    }
   },
-  handleadd() {
-    const db = wx.cloud.database({
-      env: 'lifec-4gd9vflq226e701d'
-    })
-    console.log("----", db);
-    // const _ = db.command
-    // const openid = this.data.openid
-    // console.log(openid);
-    // db.collection('demo').where({
-    //   _id: openid
-    // }).get({
-    //   success(res) {
-    //     console.log("---------", res.data.length);
-    //     if (res.data.length > 0) {
-    //       db.collection('demo').doc(openid).update({
-    //         data: {
-    //           list: _.push({ name: "bljboy", age: 18 })
-    //         }
-    //       })
-    //     } else {
-    //       console.log("无openid");
-    //       db.collection('demo').add({
-    //         data: {
-    //           _id: openid,
-    //           list: [{
-    //             name: 'bljboy',
-    //             age: 18
-    //           }]
-    //         },
-    //         success(res) {
-    //           console.log(res);
-    //         }
-    //       })
-    //     }
-    //   }
-    // })
-  },
-  handlebt() {
-    const openid = this.data.openid;
-    console.log(openid);
-    const db = wx.cloud.database({
-      env: 'lifec-4gd9vflq226e701d'
-    })
-
-    db.collection('demo').doc(openid).get({
-      success: (res) => {
-        console.log(res);
-        console.log(res.data.list);
-        this.setData({
-          list: res.data.list
-        })
-      },
-    })
-  },
-  handle() {
-    // console.log("点击");
+  onhandle() {
     wx.cloud.callFunction({
       name: 'getAll',
     }).then(res => {
-      console.log("---", res.result);
+      this.setData({
+        list: res.result
+      })
     })
-    const db = wx.cloud.database({
-      env: 'lifec-4gd9vflq226e701d'
+  },
+  onPullDownRefresh() {
+    wx.cloud.callFunction({
+      name: 'getAll',
+    }).then(res => {
+      this.setData({
+        list: res.result
+      })
+      this.handlePullRefresh()
     })
-    db.collection('demo').get({
-      success(res) {
-        console.log(res);
-      }
+  },
+  handlePullRefresh() {
+    wx.stopPullDownRefresh({
+      success: (res) => {
+        wx.showToast({
+          title: '刷新成功',
+          duration: 3000,
+          icon: "none"
+        })
+      },
     })
   }
 })

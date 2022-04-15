@@ -2,7 +2,7 @@
   width: 100%;
   background: #698AB8;
   box-shadow: 5px 9px 24px 1px rgba(128, 115, 115, 0.4);
-  border-radius: 30px;
+  border-radius: 30rpx;
 }
 
 .top-image {
