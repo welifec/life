@@ -1,11 +1,15 @@
-<view class="home-message-messagelist">
-  <view class="home-message-messagelist-item">
-    <view class="home-message-messagelist-font">
-      <view class="home-message-messagelist-font1"><text>丹鸟领航职业咨询工作室 | 免费提供一对一线上或线下咨询 的通知</text></view>
-      <view class="home-message-messagelist-font-time"><text>2021年3月31日 招生就业处</text></view>
-    </view>
-    <view class="home-message-messagelist-image">
-      <image src="/assets/home/home_message.png" />
+<view class="box1">
+  <view class="box2" wx:for="{{media}}" wx:key="index" bind:tap="handleJump" data-index="{{index}}">
+    <view class="section1">
+      <view class="main5">
+        <text class="infoBox1">{{item.text}}</text>
+        <view class="mod2">
+          <text class="txt4">{{item.time}}</text>
+        </view>
+      </view>
+      <view class="main6">
+        <image src="/assets/home/home_message.png" class="pic2"></image>
+      </view>
     </view>
   </view>
 </view>

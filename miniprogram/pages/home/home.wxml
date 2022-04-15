@@ -9,7 +9,4 @@
 <!-- 校园资讯 -->
 <child-message />
 <!-- 校园资讯列表 -->
-<child-messagelist />
-<child-messagelist />
-<child-messagelist />
-<child-messagelist />
+<child-messagelist index="{{indexChecked}}" media="{{media}}" />

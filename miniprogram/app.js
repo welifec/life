@@ -22,14 +22,13 @@ App({
     request({
       url: 'http://114.132.247.227/notice.json',
     }).then(res => {
-      console.log(res);
       that.globalData.notice = res.data.notice;
       that.globalData.media = res.data.media;
       that.globalData.news = res.data.news;
       that.globalData.dynamic = res.data.dynamic;
       // console.log(that.globalData.home_list);
     }).catch(err => {
-      console.log(err);
+      console.log(err,'获取接口错误');
     })
     if (!wx.cloud) {
       console.error('请使用 2.2.3 或以上的基础库以使用云能力')

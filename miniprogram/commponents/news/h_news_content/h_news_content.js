@@ -31,7 +31,7 @@ Component({
    */
   data: {
     imageNotice: '/assets/news/news_notice.png',
-    imageSchool:'/assets/news/news_school.png',
+    imageMedia:'/assets/news/news_media.png',
     imageImpotents: '/assets/news/news_impotent.png',
     imageDynamic:'/assets/news/news_dynamic.png',
     index: 0,

@@ -21,7 +21,6 @@ Page({
     request({
       url: 'http://114.132.247.227/notice.json',
     }).then(res => {
-      console.log(res);
       this.setData({
         notice: res.data.notice,
         media: res.data.media,

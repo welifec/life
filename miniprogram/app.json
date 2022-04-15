@@ -11,6 +11,7 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#146EF0",
     "navigationBarTextStyle": "white"
+
   },
   "tabBar": {
     "selectedColor": "#146EF0",

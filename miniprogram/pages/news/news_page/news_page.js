@@ -13,7 +13,6 @@ Page({
    */
   onLoad: function (options) {
     //控制新开页面显示的网页链接
-    console.log(options);
     let index = options.index;
     let app = getApp();
     if(options.num == 1){

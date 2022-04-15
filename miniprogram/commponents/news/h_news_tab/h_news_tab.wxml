@@ -1,16 +1,16 @@
 <!--components/news_tab.wxml-->
-<view class="group3">
-  <view class="box1">
-    <image src="/assets/news/news_things.png" class="pic1"></image>
+<!-- <view class="group3"> -->
+<view class="new_tab_image">
+  <image src="/assets/news/news_things.png" class="news_tab_imageSize"></image>
+</view>
+<!-- </view> -->
+<view class="{{tabIsTop ? 'fixedTop':''}}">
+  <view class="new_tab_box">
+    <block wx:for="{{news}}" wx:key="index">
+      <view class="news_tab_text {{indexChecked === index? 'news_tab_textClick':'news_tab_text'}}" bind:tap="textControl" data-index="{{index}}" data-item="{{item}}">
+        {{item}}
+        <view class="{{indexChecked === index ? 'new_tab_line':''}}"></view>
+      </view>
+    </block>
   </view>
 </view>
-<view class="group4">
-  <block wx:for="{{news}}" wx:key="index">
-    <view class="word1 {{indexChecked === index? 'word1_checked':'word1'}}" bind:tap="textControl" data-index="{{index}}" data-item="{{item}}">
-      {{item}}
-      <view  class="{{indexChecked === index ? 'group6':''}}"></view>
-    </view>
-  </block>
-</view>
-
-

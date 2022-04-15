@@ -1,8 +1,8 @@
 .home-message {
-  border-top: 16rpx solid #eee;
+  border-top: 10rpx solid #eee;
 
   background-color: rgba(255, 255, 255, 1.000000);
-  height: 126rpx;
+  height: 110rpx;
   margin-top: 12rpx;
   display: flex;
   flex-direction: column;
