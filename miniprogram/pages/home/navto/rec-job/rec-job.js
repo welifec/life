@@ -27,6 +27,7 @@ Page({
       })
     }
   },
+  //获取数据库所有数据
   onhandle() {
     wx.cloud.callFunction({
       name: 'getAll',

@@ -18,6 +18,7 @@ page {
   align-items: center;
 }
 
+
 .me-if image {
   width: 138rpx;
   height: 138rpx;
@@ -26,7 +27,7 @@ page {
   margin-right: 30rpx;
 }
 
-.me-if text {
+.me-if-text {
   font-size: 34rpx;
   font-family: PingFang SC;
   font-weight: 800;

@@ -1,11 +1,12 @@
 <view class="me">
   <view wx:if="{{userInfoisFlag}}" class="me-if">
     <image src="{{imageURL}}"></image>
-    <text>{{name}}</text>
+    <text class="me-if-text">{{name}}</text>
   </view>
   <view wx:else class="me-else">
     <image src="/assets/me/head.png" class="me-else-image"></image>
     <view class="me-else-view2">
+
       <button bindtap="handleLogin">点击登录</button>
     </view>
   </view>
@@ -17,7 +18,10 @@
       <image src="/assets/me/fankui.png" class="me-else-image"></image><text>意见反馈</text>
     </view>
   </view>
+  <view class="me-switchaccount">
+  <button>切换账号</button>
+  </view>
   <view wx:if="{{userInfoisFlag}}" class="me-exit">
-  <button bind:tap="exit">退出登录</button>
+    <button bind:tap="exit">退出登录</button>
   </view>
 </view>

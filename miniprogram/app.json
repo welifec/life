@@ -3,7 +3,7 @@
     "pages/home/home",
     "pages/me/me",
     "pages/news/news",
-    "pages/serve/serve",
+    "pages/relation/relation",
     "pages/home/navto/rec-job/rec-job",
     "pages/news/news_page/news_page",
     "pages/home/navto/rec-job/job-push/job-push",
@@ -20,11 +20,11 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#146EF0",
     "navigationBarTextStyle": "white"
-
   },
   "tabBar": {
     "selectedColor": "#146EF0",
-    "list": [{
+    "list": [
+      {
         "pagePath": "pages/home/home",
         "text": "首页",
         "iconPath": "/assets/tabhome/tab_home.png",
@@ -35,6 +35,12 @@
         "text": "新闻",
         "iconPath": "/assets/tabhome/tab_news.png",
         "selectedIconPath": "/assets/tabhome/tab_news_active.png"
+      },
+      {
+        "pagePath": "pages/relation/relation",
+        "text": "热聊",
+        "iconPath": "/assets/tabhome/tab_serve.png",
+        "selectedIconPath":"/assets/tabhome/tab_serve_active.png"
       },
       {
         "pagePath": "pages/me/me",

@@ -8,6 +8,7 @@ Page({
     name: '',
     imageURL: '',
   },
+  //退出登录
   exit() {
     const that = this
     wx.showModal({

@@ -1,4 +1,4 @@
-// pages/serve/serve.js
+// pages/relation/relation.js
 Page({
 
   /**
