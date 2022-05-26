@@ -1,0 +1,19 @@
+/* pages/relation/addfriends/addfriends.wxss */
+.addfriends {
+  display: flex;
+  flex-direction: column;
+
+}
+.addfriends input{
+  margin-top: 100rpx;
+  text-align: center;
+  font-size: 50rpx;
+  height: 100%;
+}
+.addfriends button{
+  width: 250rpx;
+  margin-top: 100rpx;
+  border-radius: 30rpx;
+  background-color: #146EF0;
+  color: #FFFFFF;
+}

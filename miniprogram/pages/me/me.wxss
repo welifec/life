@@ -93,8 +93,16 @@ page {
   margin-top: 100rpx;
 }
 
-.me-exit button {
+.me-switchaccount {
   border-radius: 30rpx;
   background-color: #146EF0;
   color: #FFFFFF;
+  margin-bottom: 25rpx;
+}
+
+.me-exit-bt {
+  border-radius: 30rpx;
+  background-color: #146EF0;
+  color: #FFFFFF;
+
 }

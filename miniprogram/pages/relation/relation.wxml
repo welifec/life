@@ -1,2 +1,31 @@
-<!--pages/relation/relation.wxml-->
-<text>pages/relation/relation.wxml</text>
+<view class="relation">
+  <view>
+    <button bindtap="addFriends">添加好友</button>
+  </view>
+  <scroll-view class="relation-scrollview" scroll-y="true">
+    <!-- 对方消息框 -->
+    <view class="relation-content">
+      <image src="/assets/me/head.png"></image>
+      <view class="relation-content-text">
+        <text class="relation-content-text-name">王力宏</text>
+        <text class="relation-content-text2">fsdgsdgsdgagassgadgsagsa</text>
+      </view>
+    </view>
+    <!-- 自己消息框 -->
+    <block wx:for="{{list}}" wx:key="index">
+      <view class="relation-content1"> 
+        <image src="/assets/me/head.png"></image>
+        <view class="relation-content-text1">
+          <text class="relation-content-text-name1">王力宏</text>
+          <text class="relation-content-text21">{{item.info}}</text>
+        </view>
+      </view>
+    </block>
+
+
+  </scroll-view>
+  <view class="relation-input">
+    <input type="text" placeholder="demo" bindinput="relationInput" />
+    <button bindtap="relationSend">发送</button>
+  </view>
+</view>

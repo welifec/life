@@ -1,0 +1,4 @@
+<view class="addfriends">
+  <input type="text" placeholder="请输入用户名"/>
+  <button>添加好友</button>
+</view>

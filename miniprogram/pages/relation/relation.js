@@ -1,66 +1,46 @@
 // pages/relation/relation.js
+// const cloud = require('lifec-4gd9vflq226e701d');
+const db = wx.cloud.database();
 Page({
 
-  /**
-   * 页面的初始数据
-   */
+  onLoad() {
+
+  },
   data: {
-
+    list: []
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  addFriends() {
+    wx.navigateTo({
+      url: '/pages/relation/addfriends/addfriends',
+    }),
+      wx.showToast({
+        title: '点击了',
+      })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  relationInput(event) {
+    this.setData({
+      content: event.detail.value
+    })
+    console.log(event.detail.value);
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
+  relationSend() {
+    wx.showToast({
+      title: '点击了',
+    })
+    let list = this.data.list;
+    let info = [];
+    info.push(this.data.content)
+    list.push({ time: "12123", id: "525", info: info });
+    this.setData({
+      list: list,
+      // 'list.content': this.data.list
+    })
+    // db.collection('demo').add({
+    //   data:{
+    //     info:[]
+    //   }
+    // })
+    wx.setStorageSync("content", this.data.content);
 
   }
 })

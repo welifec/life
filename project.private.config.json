@@ -114,6 +114,20 @@
           "name": "",
           "pathName": "pages/home/navto/rec-chat/chat-push/chat-push",
           "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/relation/relation",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/relation/addfriends/addfriends",
+          "query": "",
           "scene": null,
           "launchMode": "default"
         }

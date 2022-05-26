@@ -14,7 +14,8 @@
     "pages/home/navto/rec-found/lost-push/lost-push",
     "pages/home/navto/web-view/web-view",
     "pages/home/navto/web-view2/web-view2",
-    "pages/home/navto/rec-chat/chat-push/chat-push"
+    "pages/home/navto/rec-chat/chat-push/chat-push",
+    "pages/relation/addfriends/addfriends"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -40,7 +41,7 @@
         "pagePath": "pages/relation/relation",
         "text": "热聊",
         "iconPath": "/assets/tabhome/tab_serve.png",
-        "selectedIconPath":"/assets/tabhome/tab_serve_active.png"
+        "selectedIconPath": "/assets/tabhome/tab_serve_active.png"
       },
       {
         "pagePath": "pages/me/me",
