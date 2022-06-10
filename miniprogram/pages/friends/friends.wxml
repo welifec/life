@@ -1,0 +1,12 @@
+<view>
+  <button bindtap="addFriends">添加好友</button>
+</view>
+<block wx:for="{{list}}" wx:key="index">
+  <view class="relation-content" bindtap="tapfriendsList" data-userimage="{{item.imageURL}}" data-name="{{item.name}}" data-userid="{{item._openid}}">
+    <image src=" {{item.imageURL}}">
+    </image>
+    <view class="relation-content-text">
+      <text class="relation-content-text-name">{{item.name}}</text>
+    </view>
+  </view>
+</block>

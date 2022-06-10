@@ -28,13 +28,19 @@ Page({
     var timestamp = Date.parse(new Date());
     timestamp = timestamp / 1000;
     let pages = getCurrentPages().length - 2;
+
+    // 获取openid
     const openid = wx.getStorageSync('openid');
+
     that.setData({
       'list.createTime': that._handleTime(timestamp)
     })
+
+    // 云开发环境
     const db = wx.cloud.database({
       env: 'lifec-4gd9vflq226e701d'
     })
+
     const _ = db.command
     if (openid.length > 0) {
       db.collection('found').where({

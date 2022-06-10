@@ -30,6 +30,7 @@ App({
     }).catch(err => {
       console.log(err, '获取接口错误');
     })
+    
     if (!wx.cloud) {
       console.error('请使用 2.2.3 或以上的基础库以使用云能力')
     } else {
@@ -53,6 +54,7 @@ App({
         openid: res.result.openid
       })
       wx.setStorageSync("openid", that.data.openid);
+      wx.setStorageSync('imageURL', that.data.imageURL)
       // 调用数据库
       this.getdatabase("login", that.data.openid, userInfoisFlag, name, imageURL)//接收赋值的openid
       console.log(that.data.openid);

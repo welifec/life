@@ -1,0 +1,34 @@
+page {
+  background-color: #eeeeee;
+
+}
+
+.relation {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.relation-scrollview {
+  height: 100%;
+}
+
+.relation-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: 20rpx;
+}
+
+.relation-content image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin-left: 8rpx;
+}
+
+.relation-content-text-name {
+  color: #757575;
+  font-size: 50;
+  margin-left: 10rpx;
+}

@@ -15,7 +15,8 @@
     "pages/home/navto/web-view/web-view",
     "pages/home/navto/web-view2/web-view2",
     "pages/home/navto/rec-chat/chat-push/chat-push",
-    "pages/relation/addfriends/addfriends"
+    "pages/relation/addfriends/addfriends",
+    "pages/friends/friends"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -24,8 +25,7 @@
   },
   "tabBar": {
     "selectedColor": "#146EF0",
-    "list": [
-      {
+    "list": [{
         "pagePath": "pages/home/home",
         "text": "首页",
         "iconPath": "/assets/tabhome/tab_home.png",
@@ -38,7 +38,7 @@
         "selectedIconPath": "/assets/tabhome/tab_news_active.png"
       },
       {
-        "pagePath": "pages/relation/relation",
+        "pagePath": "pages/friends/friends",
         "text": "热聊",
         "iconPath": "/assets/tabhome/tab_serve.png",
         "selectedIconPath": "/assets/tabhome/tab_serve_active.png"
